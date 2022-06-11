@@ -9,7 +9,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3575984140719575208}
-  - component: {fileID: 3575984141740990538}
   m_Layer: 5
   m_Name: Popups
   m_TagString: Untagged
@@ -39,18 +38,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &3575984141740990538
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3575984140719575191}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7ee43af14adc4783a597ab2d827d114d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &3541402297573936397
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -58,11 +45,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3575984140719575208}
     m_Modifications:
-    - target: {fileID: 2071008960229643240, guid: 119e18021f9e48b4397783e3a902795b,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5806969612055459024, guid: 119e18021f9e48b4397783e3a902795b,
         type: 3}
       propertyPath: m_Name
@@ -297,11 +279,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: CreateNewEventPopup
-      objectReference: {fileID: 0}
-    - target: {fileID: 4735605079288963995, guid: de2004c1abdb6994ba8db6bce54a91ed,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: de2004c1abdb6994ba8db6bce54a91ed, type: 3}
