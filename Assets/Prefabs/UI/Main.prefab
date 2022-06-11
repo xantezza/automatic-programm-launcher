@@ -119,6 +119,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 54940705508843755}
     m_Modifications:
+    - target: {fileID: 2104666564, guid: ae7946973724cc846990213a4e17e405, type: 3}
+      propertyPath: EventItemContentRoot
+      value: 
+      objectReference: {fileID: 54940704255195001}
     - target: {fileID: 3478107622144385136, guid: ae7946973724cc846990213a4e17e405,
         type: 3}
       propertyPath: m_Name
@@ -369,6 +373,12 @@ PrefabInstance:
 --- !u!224 &54940705191601764 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 4572120141490973002, guid: db6b5b19e62ecd74292c75e50e330ce8,
+    type: 3}
+  m_PrefabInstance: {fileID: 4589272803120631598}
+  m_PrefabAsset: {fileID: 0}
+--- !u!224 &54940704255195001 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 4572120140544145495, guid: db6b5b19e62ecd74292c75e50e330ce8,
     type: 3}
   m_PrefabInstance: {fileID: 4589272803120631598}
   m_PrefabAsset: {fileID: 0}

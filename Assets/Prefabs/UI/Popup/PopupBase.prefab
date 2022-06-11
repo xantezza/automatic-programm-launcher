@@ -120,7 +120,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6848283148622301049}
-  - component: {fileID: 5952335058543893058}
+  - component: {fileID: 462764083556013300}
   m_Layer: 5
   m_Name: PopupBase
   m_TagString: Untagged
@@ -135,7 +135,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6848283148622301050}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -148,7 +148,7 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &5952335058543893058
+--- !u!114 &462764083556013300
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -157,7 +157,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 6848283148622301050}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: be27f727c66c42ad9ac47e283d8cf479, type: 3}
+  m_Script: {fileID: 11500000, guid: 331e090f82a641f1bdf1e5fff7184ec6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   gameObjectToSetActive: {fileID: 1378891520106766402}
