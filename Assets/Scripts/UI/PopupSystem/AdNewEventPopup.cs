@@ -18,18 +18,18 @@ namespace UI.PopupSystem
 
             generateButton.onClick.AddListener(OnGenerateButtonClickedHandler);
             closeButton.onClick.AddListener(OnCloseButtonClickedHandler);
+        }
 
-            void OnGenerateButtonClickedHandler()
-            {
-                var eventItemData = new EventItemData(nameInputField.text);
-                cachedCallback?.Invoke(eventItemData);
-                InternalShow(false);
-            }
+        private void OnCloseButtonClickedHandler()
+        {
+            InternalShow(false);
+        }
 
-            void OnCloseButtonClickedHandler()
-            {
-                InternalShow(false);
-            }
+        private void OnGenerateButtonClickedHandler()
+        {
+            var eventItemData = new EventItemData(nameInputField.text);
+            cachedCallback?.Invoke(eventItemData);
+            InternalShow(false);
         }
 
         public void Show(Action<EventItemData> onUserActionCallback, EventItemData overrideDefaultEventItemData = null)

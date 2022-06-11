@@ -1,4 +1,5 @@
-﻿using TMPro;
+﻿using Managers;
+using TMPro;
 using UI.PopupSystem;
 using UnityEngine;
 using UnityEngine.UI;
@@ -13,31 +14,35 @@ namespace UI
 
         private EventItemData cachedItemData;
 
+        private PopupManager PopupManager => GameManager.Instance.PopupManager;
+        private EventManager EventManager => GameManager.Instance.EventManager;
+
         private void Awake()
         {
             editButton.onClick.AddListener(OnEditClicked);
             removeButton.onClick.AddListener(OnRemoveClicked);
+        }
 
-            void OnEditClicked()
+        private void OnEditClicked()
+        {
+            if (PopupManager.TryGetPopup(out AdNewEventPopup popup))
             {
-                if (Popup.TryGetPopup(out AdNewEventPopup popup))
-                {
-                    popup.Show(OnEditingUserActionHandler, cachedItemData);
-                }
+                popup.Show(OnEditingUserActionHandler, cachedItemData);
             }
+        }
 
-            void OnEditingUserActionHandler(EventItemData data)
+        private void OnRemoveClicked()
+        {
+            if (PopupManager.TryGetPopup(out ValidateUserActionPopup popup))
             {
-                Init(data);
+                popup.Show(OnUserActionCallback);
             }
+        }
 
-            void OnRemoveClicked()
-            {
-                if (Popup.TryGetPopup(out ValidateUserActionPopup popup))
-                {
-                    popup.Show(OnUserActionCallback);
-                }
-            }
+        private void OnEditingUserActionHandler(EventItemData data)
+        {
+            EventManager.ModifyEvent(cachedItemData, data);
+            Init(data);
         }
 
         public void Init(EventItemData data)
@@ -48,10 +53,10 @@ namespace UI
 
         private void OnUserActionCallback(bool choice)
         {
-            if (choice)
-            {
-                Destroy(gameObject);
-            }
+            if (!choice) return;
+
+            EventManager.RemoveEvent(cachedItemData);
+            Destroy(gameObject);
         }
     }
 }

@@ -1,9 +1,8 @@
-﻿using UnityEngine;
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using DG.Tweening;
+﻿using DG.Tweening;
+using Managers;
 using Sirenix.OdinInspector;
+using System;
+using UnityEngine;
 
 namespace UI.PopupSystem
 {
@@ -12,8 +11,6 @@ namespace UI.PopupSystem
         public event Action<bool> Showing;
         public event Action<bool> Showed;
 
-        private static readonly List<Popup> popups = new List<Popup>();
-
         [SerializeField] private GameObject gameObjectToSetActive;
         [SerializeField] private bool useAnimation;
         [ShowIf(nameof(useAnimation))] [SerializeField] private RectTransform rectTransformToAnimate;
@@ -21,9 +18,11 @@ namespace UI.PopupSystem
         [ShowIf(nameof(useAnimation))] [SerializeField] private float maxScale;
         [ShowIf(nameof(useAnimation))] [SerializeField] private float duration;
 
+        private PopupManager PopupManager => GameManager.Instance.PopupManager;
+
         protected virtual void Awake()
         {
-            popups.Add(this);
+            PopupManager.AddPopup(this);
         }
 
         protected void InternalShow(bool state = true, bool forceWithoutAnimation = false)
@@ -51,12 +50,6 @@ namespace UI.PopupSystem
 
             gameObjectToSetActive.SetActive(state);
             Showed?.Invoke(state);
-        }
-
-        public static bool TryGetPopup<T>(out T popup) where T : Popup
-        {
-            popup = popups.FirstOrDefault(x => x is T) as T;
-            return popup != null;
         }
     }
 }

@@ -276,6 +276,12 @@ Camera:
   m_OcclusionCulling: 0
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
+--- !u!224 &700001274 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 54940704255195001, guid: f1cdda57b02086e48835692867023e85,
+    type: 3}
+  m_PrefabInstance: {fileID: 54940705297765927}
+  m_PrefabAsset: {fileID: 0}
 --- !u!224 &1155772640 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 3575984140719575208, guid: 77e590594bbe3c749b1726d1764dd716,
@@ -693,7 +699,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 3575984141740990538, guid: 77e590594bbe3c749b1726d1764dd716, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 77e590594bbe3c749b1726d1764dd716, type: 3}
 --- !u!1001 &4441015517245042581
 PrefabInstance:
@@ -761,6 +768,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: GameManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 4441015516226505307, guid: f078ddd91fb2aec449612e70fbeb0a6f,
+        type: 3}
+      propertyPath: EventManager.EventItemContentRoot
+      value: 
+      objectReference: {fileID: 700001274}
+    - target: {fileID: 4441015516226505307, guid: f078ddd91fb2aec449612e70fbeb0a6f,
+        type: 3}
+      propertyPath: EventManager.saveableData.eventsItemsData.Array.size
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f078ddd91fb2aec449612e70fbeb0a6f, type: 3}

@@ -43,3 +43,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 432a35c22dcae1d42b58f905afbad254, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  EventManager:
+    EventItemContentRoot: {fileID: 0}
+    EventItemPrefab: {fileID: 4638207175076714343, guid: 7fb24769930955c4f8d9f69008cd1d7f,
+      type: 3}
